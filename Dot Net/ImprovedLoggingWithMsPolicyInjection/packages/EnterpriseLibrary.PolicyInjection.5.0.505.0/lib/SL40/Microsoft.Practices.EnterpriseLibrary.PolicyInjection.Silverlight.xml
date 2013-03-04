@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Silverlight</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData">
+            <summary>
+            Configuration element for the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.AssemblyMatchingRule"/>.
+            </summary>
+            <summary>
+            Configuration element for the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.AssemblyMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData">
+            <summary>
+            A configuration element base class that stores configuration information about a matching rule.
+            </summary>
+            <summary>
+            A configuration element base class that stores configuration information about a matching rule.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData.Match">
+            <summary>
+            The assembly name to match.
+            </summary>
+            <value>Assembly name to match.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData">
+            <summary>
+            Configuration element for the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.CustomAttributeMatchingRule"/> configuration.
+            </summary>
+            <summary>
+            Configuration element for the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.CustomAttributeMatchingRule"/> configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData.SearchInheritanceChain">
+            <summary>
+            Should we search the inheritance chain to find the attribute?
+            </summary>
+            <value>The "searchInheritanceChain" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData.AttributeTypeName">
+            <summary>
+            Name of attribute type to match.
+            </summary>
+            <value>The "attributeType" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData.AttributeType">
+            <summary>
+            The underlying type object for the attribute we want to search for.
+            </summary>
+            <value>This wraps the AttributeTypeName property in a type converter.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.InjectionFriendlyRuleDrivenPolicy">
+            <summary>
+            Dependency injection-friendlier subclass of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.RuleDrivenPolicy"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.InjectionFriendlyRuleDrivenPolicy.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.Practices.Unity.InterceptionExtension.IMatchingRule},System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.InjectionFriendlyRuleDrivenPolicy"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData">
+            <summary>
+            Stores information about a single
+            matchable item. Specifically, the string to match, and whether it is case
+            sensitive or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData.Match">
+            <summary>
+            Gets or sets the string to match against.
+            </summary>
+            <value>The "match" attribute value out of the configuration file.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData.IgnoreCase">
+            <summary>
+            Gets or sets the case sensitivity flag.
+            </summary>
+            <value>The "ignoreCase" attribute value out of the configuration file.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchDataCollection`1">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData"/> objects with unique matches.
+            </summary>
+            <typeparam name="TMatchData">The type of collection.</typeparam>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchDataCollection`1.CanInsert(`0)">
+            <summary>
+            Determines if the item can be inserted into the collection.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns><see langword="true" /> if the item has a match that is unique in the collection.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData">
+            <summary>
+            A configuration element that supports the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MemberNameMatchingRule"/>.
+            </summary>
+            <summary>
+            A configuration element that supports the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MemberNameMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData.Matches">
+            <summary>
+            The collection of patterns to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData">
+            <summary>
+            Configuration element that stores the configuration information for an instance
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MethodSignatureMatchingRule"/>.
+            </summary>
+            <summary>
+            Configuration element that stores the configuration information for an instance
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MethodSignatureMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.StringBasedMatchingRuleData">
+            <summary>
+            Base class for matching rule configuration data for those rules that take
+            a single match instance consisting of a string to match and an
+            ignore case flag.
+            </summary>
+            <summary>
+            Base class for matching rule configuration data for those rules that take
+            a single match instance consisting of a string to match and an
+            ignore case flag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.StringBasedMatchingRuleData.Match">
+            <summary>
+            The string to match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.StringBasedMatchingRuleData.IgnoreCase">
+            <summary>
+            Should comparisons be case sensitive?
+            </summary>
+            <value>If false, comparison is case sensitive. If true, comparison is case insensitive.</value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData.Parameters">
+            <summary>
+            The collection of parameters that make up the matching method signature.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeElement">
+            <summary>
+            A configuration element representing a single parameter in a method signature.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeElement.ParameterTypeName">
+            <summary>
+            The parameter type required.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData">
+            <summary>
+            Configuration element that stores the configuration information for an instance
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.NamespaceMatchingRule"/>.
+            </summary>
+            <summary>
+            Configuration element that stores the configuration information for an instance
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.NamespaceMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData.Matches">
+            <summary>
+            The collection of patterns to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchingRuleData">
+            <summary>
+            A class storing configuration information for an instance of
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ParameterTypeMatchingRule"/>.
+            </summary>
+            <summary>
+            A class storing configuration information for an instance of
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ParameterTypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchingRuleData.Matches">
+            <summary>
+            The collection of parameter types to match against.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData">
+            <summary>
+            An extended <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData"/> class that also includes the
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData.ParameterKind"/> of the parameter to match.
+            </summary>
+            <summary>
+            An extended <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData"/> class that also includes the
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData.ParameterKind"/> of the parameter to match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData.ParameterKind">
+            <summary>
+            What kind of parameter is this? See <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData.ParameterKind"/> for available values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData">
+            <summary>
+            A data class that maps the information about
+            a policy from the configuration source.
+            </summary>
+            <summary>
+            A data class that maps the information about
+            a policy from the configuration source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData.#ctor">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData"/> with no name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData.GetRegistrations">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the policy represented by this config element and its associated objects.
+            </summary>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData.MatchingRules">
+            <summary>
+            Gets the collection of matching rules from configuration.
+            </summary>
+            <value>The matching rule data collection.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData.Handlers">
+            <summary>
+            Get the collection of handlers from configuration.
+            </summary>
+            <value>The matching rule data collection.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings">
+            <summary>
+            A configuration class that stores the policy set in configuration.
+            </summary>
+            <summary>
+            A settings class that stores the policy set in configuration.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings.SectionName">
+            <summary>
+            Section name as it appears in the configuration file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings.ConfigureContainer(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds to the <paramref name="container"/> the policy definitions represented in the configuration file.
+            </summary>
+            <param name="container">The container on which the injection policies must be configured.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings.GetRegistrations(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the Policy Injection settings represented by this config section.
+            </summary>
+            <param name="configurationSource">This is currently ignored by this routine.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings.GetUpdatedRegistrations(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Return the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to reconfigure
+            the container after a configuration source has changed.
+            </summary>
+            <remarks>If there are no reregistrations, return an empty sequence.</remarks>
+            <param name="configurationSource">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/> containing
+            the configuration information.</param>
+            <returns>The sequence of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyInjectionSettings.Policies">
+            <summary>
+            Gets the collection of Policies.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData">
+            <summary>
+            A class that stores configuration information for instances
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingRule"/>.
+            </summary>
+            <summary>
+            A class that stores configuration information for instances
+            of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData.Matches">
+            <summary>
+            The collection of patterns to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchData">
+            <summary>
+            A derived <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData"/> which adds storage for which methods
+            on the property to match.
+            </summary>
+            <summary>
+            A derived <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchData"/> which adds storage for which methods
+            on the property to match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchData.MatchOption">
+            <summary>
+            Which methods of the property to match. Default is to match both getters and setters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData">
+            <summary>
+            A class that stores configuration information about an
+            instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ReturnTypeMatchingRule"/>.
+            </summary>
+            <summary>
+            A class that stores configuration information about an
+            instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ReturnTypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData.Match">
+            <summary>
+            The pattern to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData">
+            <summary>
+            A class that stores configuration information for
+            an instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TagAttributeMatchingRule"/>.
+            </summary>
+            <summary>
+            A class that stores configuration information for
+            an instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TagAttributeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData.Match">
+            <summary>
+            The pattern to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData">
+            <summary>
+            A class that stores configuration information for
+            an instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TypeMatchingRule"/>.
+            </summary>
+            <summary>
+            A class that stores configuration information for
+            an instance of <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData.GetRegistrations(System.String)">
+            <summary>
+            Get the set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects needed to
+            register the matching rule represented by this config element and its associated objects.
+            </summary>
+            <param name="nameSuffix">A suffix for the names in the generated type registration objects.</param>
+            <returns>The set of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeRegistration"/> objects.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData.Matches">
+            <summary>
+            The collection of patterns to match.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.InstanceInterceptionPolicySettingInjectionMember">
+            <summary>
+             Sets the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptor"/> on the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptionPolicy"/> for
+             a type in the <see cref="T:Microsoft.Practices.Unity.IUnityContainer"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.InstanceInterceptionPolicySettingInjectionMember.#ctor(Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptor)">
+            <summary>
+             Initializes the InstanceInterceptionPolicySettingInjectionMember with the provided interceptor.
+            </summary>
+            <param name="interceptor">The <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptor"/> to set on the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptionPolicy"/></param>
+            <exception cref="T:System.ArgumentNullException">A valid interceptor is required</exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.InstanceInterceptionPolicySettingInjectionMember.AddPolicies(System.Type,System.Type,System.String,Microsoft.Practices.ObjectBuilder2.IPolicyList)">
+            <summary>
+            Add policies to the <paramref name="policies"/> to configure the container with 
+            an appropriate <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptionPolicy"/>
+            </summary>
+            <param name="serviceType">Type of the interface being registered. This parameter is
+            ignored by this class.</param>
+            <param name="implementationType">Type to register.</param>
+            <param name="name">Name used to resolve the type object.</param>
+            <param name="policies">Policy list to add policies to.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.InstanceInterceptionPolicySettingInjectionMember.Interceptor">
+            <summary>
+             The <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptor"/> set on the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IInstanceInterceptionPolicy"/>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.AssemblyMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.AssemblyMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.AssemblyMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.AssemblyMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.CustomAttributeMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.CustomAttributeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.CustomAttributeMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.CustomAttributeMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.MemberNameMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MemberNameMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.MemberNameMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MemberNameMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.MethodSignatureMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MethodSignatureMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.MethodSignatureMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.MethodSignatureMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.NamespaceMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.NamespaceMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.NamespaceMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.NamespaceMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.ParameterTypeMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ParameterTypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.ParameterTypeMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ParameterTypeMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.PropertyMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.PropertyMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.ReturnTypeMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ReturnTypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.ReturnTypeMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ReturnTypeMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.TagAttributeMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TagAttributeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.TagAttributeMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TagAttributeMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.TypeMatchingRule">
+            <summary>
+            Placeholder for <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TypeMatchingRule"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.MatchingRules.TypeMatchingRule.Matches(System.Reflection.MethodBase)">
+            <summary>
+            Tests to see if this rule applies to the given member.
+            </summary>
+            <remarks>
+            This type is available to support the configuration subsystem. Use 
+            <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.TypeMatchingRule"/> instead.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector">
+            <summary>
+            A non-static facade class that provides the main entry point into the
+            Policy Injection Application Block. Methods on this class
+            create intercepted objects, or wrap existing instances with
+            interceptors.
+            </summary>
+            <remarks>
+            <para>
+            This facade can be initialized with either an <see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/> or an 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>. In the latter case, a new container will be created and it will be disposed
+            when the policy injector is disposed.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector"/> class with the supplied configuration source.
+            </summary>
+            <param name="configurationSource">The configuration source from which to retrieve configuration information.</param>
+            <exception cref="T:System.ArgumentNullException">when <paramref name="configurationSource"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector"/> class with the supplied service locator.
+            </summary>
+            <param name="serviceLocator">The service locator from which an <see cref="T:Microsoft.Practices.Unity.IUnityContainer"/> can be resolved
+            to perform interception.</param>
+            <exception cref="T:System.ArgumentNullException">when <paramref name="serviceLocator"/> is <see langword="null"/>.</exception>
+            <exception cref="T:System.InvalidOperationException">when an <see cref="T:Microsoft.Practices.Unity.IUnityContainer"/> cannot be resolved from the 
+            <paramref name="serviceLocator"/>, or the resolved container does not have the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.Interception"/>
+            extension.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Wrap``1(System.Object)">
+            <summary>
+            Creates a proxy for the given object that adds interception policies.
+            </summary>
+            <remarks>
+            Despite the name of the <typeparamref name="TInterface"/> parameter, this
+            may be any type that the instance is assignable to, including both interfaces
+            that it implements and the concrete type of the object.
+            </remarks>
+            <typeparam name="TInterface">Type of the proxy to return.</typeparam>
+            <param name="instance">Instance object to wrap.</param>
+            <returns>The proxy for the instance, or the raw object if no policies apply.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Wrap(System.Type,System.Object)">
+            <summary>
+            Creates a proxy for the given object that adds interception policies.
+            </summary>
+            <param name="typeToReturn">Type of the proxy to return.</param>
+            <param name="instance">Instance object to wrap.</param>
+            <returns>The proxy for the instance, or the raw object if no policies apply.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Create``2(System.Object[])">
+            <summary>
+            Creates a new object of type <typeparamref name="TObject"/> and
+            adds interception as needed to match the policies specified for the injector.
+            </summary>
+            <typeparam name="TObject">Concrete object type to create.</typeparam>
+            <typeparam name="TInterface">Type of reference to return. Must be an interface the object implements.</typeparam>
+            <param name="args">Arguments to pass to the <typeparamref name="TObject"/> constructor.</param>
+            <returns>The intercepted object (or possibly a raw instance if no policies apply).</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Create(System.Type,System.Type,System.Object[])">
+            <summary>
+            Creates a new object of type <paramref name="typeToCreate"/> and
+            adds interception as needed to match the policies specified for the injector.
+            </summary>
+            <param name="typeToCreate">Concrete object type to create.</param>
+            <param name="typeToReturn">Type of reference to return. Must be an interface the object implements.</param>
+            <param name="args">Arguments to pass to the <paramref name="typeToCreate"/> constructor.</param>
+            <returns>The intercepted object (or possibly a raw instance if no policies apply).</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Dispose">
+            <summary>
+            Dispose this policy injector.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.PolicyInjector.Dispose(System.Boolean)">
+            <summary>
+            Dispose this policy injector.
+            </summary>
+            <param name="disposing"><see langword="true"/> if being called from the IDisposable.Dispose method, 
+            <see langword="false"/> if being called from a finalizer.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorAssemblyMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to The match was not set for assembly matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorAttributeTypeNameNotSet">
+            <summary>
+              Looks up a localized string similar to The attribute type name was not set for custom attribute matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorMemberNameMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to One of the matches was not set for member name matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorMethodSignatureMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to The match was not set for method signature matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorNamespaceMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to One of the matches was not set for namespace matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorParameterTypeMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to One of the match was not set for parameter type matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorParameterTypeNameNotSet">
+            <summary>
+              Looks up a localized string similar to The parameter type name was not set for parameter type element {0} of method signature matching rule {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorPolicyNameNotSet">
+            <summary>
+              Looks up a localized string similar to The policy name was not set..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorPropertyMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to One of the matches was not set for property matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorReturnTypeMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to The return type was not set for return type matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorTagAttributeMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to The tag attribute name was not set for tag attribute matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.ErrorTypeMatchingRuleMatchNotSet">
+            <summary>
+              Looks up a localized string similar to One of the matches was not set for type matching rule {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Properties.Resources.PlaceholderRule">
+            <summary>
+              Looks up a localized string similar to This rule is not intended to be used directly. Use the rules from the Microsoft.Practices.Unity.Interception assembly instead..
+            </summary>
+        </member>
+    </members>
+</doc>

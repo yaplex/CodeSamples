@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImprovedLoggingWithMsPolicyInjection", "ImprovedLoggingWithMsPolicyInjection\ImprovedLoggingWithMsPolicyInjection.csproj", "{0E431761-F7BF-4F47-BF20-59DE8D820A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImprovedLoggingWithMsPolicyInjection.Business", "ImprovedLoggingWithMsPolicyInjection.Business\ImprovedLoggingWithMsPolicyInjection.Business.csproj", "{D47B1ED4-5B0C-4291-837C-FB5796DAE63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImprovedLoggingWithMsPolicyInjection.DataAccess", "ImprovedLoggingWithMsPolicyInjection.DataAccess\ImprovedLoggingWithMsPolicyInjection.DataAccess.csproj", "{BC3CAFF6-9536-48DF-83FF-8FE005FF3446}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E431761-F7BF-4F47-BF20-59DE8D820A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E431761-F7BF-4F47-BF20-59DE8D820A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E431761-F7BF-4F47-BF20-59DE8D820A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E431761-F7BF-4F47-BF20-59DE8D820A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47B1ED4-5B0C-4291-837C-FB5796DAE63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47B1ED4-5B0C-4291-837C-FB5796DAE63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47B1ED4-5B0C-4291-837C-FB5796DAE63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47B1ED4-5B0C-4291-837C-FB5796DAE63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3CAFF6-9536-48DF-83FF-8FE005FF3446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3CAFF6-9536-48DF-83FF-8FE005FF3446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3CAFF6-9536-48DF-83FF-8FE005FF3446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3CAFF6-9536-48DF-83FF-8FE005FF3446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.PolicyInjection.5.0.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal
