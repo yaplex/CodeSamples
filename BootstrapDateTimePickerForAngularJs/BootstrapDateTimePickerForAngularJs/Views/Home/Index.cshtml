@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container" ng-app="myApp">
+    <div class="row" ng-controller="DateTimeController">
+        <div class='col-sm-3'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" ng-model="selectedDt" data-date-time-picker/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <button ng-click="submit()">Click me</button>
+        </div>
+        <div>
+            {{selectedDt}}
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        var myApp = angular.module('myApp', []);
+        var dateTimePicker = function() {
+            return {
+                restrict: "A",
+                require: "ngModel",
+                link: function (scope, element, attrs, ngModelCtrl) {
+                    var parent = $(element).parent();
+                    var dtp = parent.datetimepicker({
+                        format: "LL",
+                        showTodayButton: true
+                    });
+                    dtp.on("dp.change", function (e) {
+                        ngModelCtrl.$setViewValue(moment(e.date).format("LL"));
+                        scope.$apply();
+                    });
+                }
+            };
+        };
+
+        myApp.controller('DateTimeController', [
+            '$scope', function($scope) {
+                $scope.selectedDt = '';
+
+                $scope.submit = function() {
+                    var dt = new Date($scope.selectedDt);
+                    alert(dt);
+                }
+            }
+        ]);
+
+        myApp.directive('dateTimePicker', dateTimePicker);
+    </script>
+}
