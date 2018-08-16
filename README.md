@@ -1,6 +1,5 @@
-Source samples from Yaplex blog
-=============
+Designed for a RequireJS and AngularJS project
+If Require not used remove the Require wrapping and it should work fine
 
-Source samples from my blog
 
-Design and development by Alex Shapovalov, Senior [.NET Developer](https://yaplex.com ".NET Developer") in Toronto. Learn more about me from [.NET Developer resume](https://yaplex.com/resume ".NET developer resume").
+Forked from : Alex Shapovalov, Senior [.NET Developer](https://yaplex.com ".NET Developer") in Toronto
