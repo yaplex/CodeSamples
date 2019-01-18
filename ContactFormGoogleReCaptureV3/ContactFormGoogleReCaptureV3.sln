@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFormGoogleReCaptureV3", "ContactFormGoogleReCaptureV3\ContactFormGoogleReCaptureV3.csproj", "{95C42C02-83BB-4CFE-B9D2-06C2809FF4C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95C42C02-83BB-4CFE-B9D2-06C2809FF4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C42C02-83BB-4CFE-B9D2-06C2809FF4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C42C02-83BB-4CFE-B9D2-06C2809FF4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C42C02-83BB-4CFE-B9D2-06C2809FF4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8F9ECDC-5DF5-42B3-A697-97F98A921D5B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿@model ContactFormGoogleReCaptureV3.Models.ContactUsViewModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Contact Us</h2>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcHpYoUAAAAAITt2G2PEeawHQ8vdvRvUyIf8cKT"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LcHpYoUAAAAAITt2G2PEeawHQ8vdvRvUyIf8cKT', {action: 'contact_us'}).then(function(token) {
+            $("#GoogleCaptchaToken").val(token);
+        });
+    });
+</script>
+
+@using (Html.BeginForm("Index", "ContactUs"))
+{
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <label for="Name">Your Name:</label>
+        @Html.TextBoxFor(m => m.Name, new { @class="form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Email">Your Email:</label>
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Message">Type your message:</label>
+        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", rows=5 })
+    </div>
+    @Html.HiddenFor(m=>m.GoogleCaptchaToken)
+    <button type="submit" class="btn btn-default">Submit</button>
+}
