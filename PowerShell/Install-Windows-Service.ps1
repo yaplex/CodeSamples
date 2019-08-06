@@ -1,25 +1,28 @@
 $serviceName = "ServiceName"
 
 # verify if the service already exists, and if yes remove it first
-if (Get-Service $serviceName -ErrorAction SilentlyContinue)
+# using WMI to remove Windows service because PowerShell does not have CmdLet for this
+$existingService = Get-WmiObject -Class Win32_Service -Filter "name='$serviceName'"
+
+if ($existingService)
 {
-	# using WMI to remove Windows service because PowerShell does not have CmdLet for this
-    $serviceToRemove = Get-WmiObject -Class Win32_Service -Filter "name='$serviceName'"
-    $serviceToRemove.delete()
+    $serviceToRemove.Delete()
     "service removed"
 }
 else
 {
-	# just do nothing
+    # just do nothing
     "service does not exists"
 }
 
 "installing service"
-# creating credentials which can be used to run my windows service
+
+# creating credentials which can be used to run my Windows service
 $secpasswd = ConvertTo-SecureString "MyPa$$word" -AsPlainText -Force
 $mycreds = New-Object System.Management.Automation.PSCredential (".\MyUserName", $secpasswd)
 $binaryPath = "c:\myServiceBinaries\MyService.exe"
-# creating widnows service using all provided parameters
+
+# creating Windows service using all provided parameters
 New-Service -name $serviceName -binaryPathName $binaryPath -displayName $serviceName -startupType Automatic -credential $mycreds
 
-"installation complited"
+"installation completed"
