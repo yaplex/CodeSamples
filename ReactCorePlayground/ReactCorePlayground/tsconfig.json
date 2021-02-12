@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "wwwroot/compiled",
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}
